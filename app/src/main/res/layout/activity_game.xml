@@ -1,124 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gameBoard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
-
     <TextView
         android:id="@+id/game_activity_tic_tac_toe_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="Tic Tac Toe"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/game_activity_status_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Player X's turn"
         android:textSize="24sp"
-        android:layout_marginBottom="24dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_tic_tac_toe_textView" />
 
-    <GridLayout
-        android:id="@+id/grid_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="3">
+    <!-- First Row -->
+    <Button
+        android:id="@+id/game_activity_top_left_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/game_activity_top_center_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_status_textView" />
 
-        <Button
-            android:id="@+id/game_activity_button_0"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <Button
+        android:id="@+id/game_activity_top_center_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/game_activity_top_right_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/game_activity_top_left_button"
+        app:layout_constraintTop_toTopOf="@+id/game_activity_top_left_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <Button
+        android:id="@+id/game_activity_top_right_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/game_activity_top_center_button"
+        app:layout_constraintTop_toTopOf="@+id/game_activity_top_center_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <!-- Second Row -->
+    <Button
+        android:id="@+id/game_activity_middle_left_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/game_activity_top_left_button"
+        app:layout_constraintStart_toStartOf="@+id/game_activity_top_left_button"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_top_left_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <Button
+        android:id="@+id/game_activity_middle_center_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/game_activity_top_center_button"
+        app:layout_constraintStart_toStartOf="@+id/game_activity_top_center_button"
+        app:layout_constraintTop_toTopOf="@+id/game_activity_middle_left_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <Button
+        android:id="@+id/game_activity_middle_right_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/game_activity_top_right_button"
+        app:layout_constraintStart_toStartOf="@+id/game_activity_top_right_button"
+        app:layout_constraintTop_toTopOf="@+id/game_activity_middle_center_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <!-- Third Row -->
+    <Button
+        android:id="@+id/game_activity_bottom_left_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/game_activity_middle_left_button"
+        app:layout_constraintStart_toStartOf="@+id/game_activity_middle_left_button"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_middle_left_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
+    <Button
+        android:id="@+id/game_activity_bottom_center_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/game_activity_middle_center_button"
+        app:layout_constraintStart_toStartOf="@+id/game_activity_middle_center_button"
+        app:layout_constraintTop_toTopOf="@+id/game_activity_bottom_left_button" />
 
-        <Button
-            android:id="@+id/game_activity_button_7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
-
-        <Button
-            android:id="@+id/game_activity_button_8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:text="X"
-            android:textSize="40sp" />
-
-    </GridLayout>
+    <Button
+        android:id="@+id/game_activity_bottom_right_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/game_activity_middle_right_button"
+        app:layout_constraintStart_toStartOf="@+id/game_activity_middle_right_button"
+        app:layout_constraintTop_toTopOf="@+id/game_activity_bottom_center_button" />
 
     <Button
         android:id="@+id/game_activity_play_again_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
         android:padding="16dp"
-        android:text="Play Again" />
+        android:text="Play Again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_bottom_center_button" />
 
-</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
